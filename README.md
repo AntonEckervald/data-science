@@ -1,22 +1,22 @@
-# Accept Reject
+## Accept Reject
 
 $$f(x) <= M * g(x)$$
 $$M >= \frac{f(x)}{g(x)}$$
 
-$M$ Needs to be the lowest value higher than the maximum of $f(x)/g(x)$
+$M$ Needs to be the lowest value higher than the maximum of $\frac{f(x)}{g(x)}$
 
 $$g(x) = \frac{1}{b-a}$$
 
-# Hoeffding confidence interval
+## Hoeffding confidence interval
 
 $$
 \epsilon = (b-a) * \sqrt{\frac{\ln\left(\frac{2}{\alpha}\right)}{2n}}
 $$
 
-# Splits
+## Splits
 
 ```py
-# 40%, 20%, 60%
+# 40%, 20%, 40%
 split1 = int(0.4 _ df.shape[0])
 split2 = int(0.6 _ df.shape[0])
 
@@ -25,9 +25,9 @@ problem2_X_calib = problem2_X[split1:split2]
 problem2_X_test = problem2_X[split2:]
 ```
 
-## Markov Chains
+# Markov Chains
 
-# General Notes
+## General Notes
 
 A Chain is Irreducible if you can get from any state to any other state.\\
 A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.\\
@@ -35,7 +35,7 @@ Quick check:\\
 If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.\\
 If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
 
-# Irreducible
+## Irreducible
 
 ```py
 def is_irreducible(P):
@@ -44,7 +44,7 @@ def is_irreducible(P):
   return np.all(np.linalg.matrix_power(I + P, n-1) > 0)
 ```
 
-# Stationary distribution
+## Stationary distribution
 
 ```py
 def find_stationary(P):
@@ -54,7 +54,7 @@ def find_stationary(P):
   return steady_state / steady_state.sum()
 ```
 
-# Reversible
+## Reversible
 
 ```py
 def is_reversible(P, stat_dist):
@@ -65,7 +65,7 @@ def is_reversible(P, stat_dist):
   return True
 ```
 
-# State after n iterations
+## State after n iterations
 
 ```py
 state = np.array([1.0, 0.0, 0.0]) # Start in A
@@ -74,7 +74,7 @@ for _ in range(n):
 state[i] # Probability of being in state i after n iterations
 ```
 
-# First time state after n iterations
+## First time state after n iterations
 
 ```py
 state = np.array([1.0, 0.0, 0.0]) # Start in A
@@ -84,7 +84,7 @@ for _ in range(n):
 state[i] # Probability of being in state i after n iterations
 ```
 
-# Expected number of steps
+## Expected number of steps
 
 "What is the expected number of steps until the first time one enters B having started in A"
 
@@ -102,7 +102,7 @@ solution = np.linalg.solve(coefficients, constants)
 solution[0] # We are interested in the solution for A
 ```
 
-# Period
+## Period
 
 ```py
 P_power = P.copy()
@@ -113,7 +113,7 @@ for n in range(1, state**2 + 1):
 period = reduce(gcd, return_time)
 ```
 
-## Matplotlib
+# Matplotlib
 
 ```py
 plt.whateverplot(x, y, alpha=, label="")
