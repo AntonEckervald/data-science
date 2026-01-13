@@ -7,6 +7,19 @@ $M$ Needs to be the lowest value higher than the maximum of $\frac{f(x)}{g(x)}$
 
 $$g(x) = \frac{1}{b-a}$$
 
+Now draw u and x from the distribution and check
+
+$$u <= \frac{f(x)}{M * g(x)}$$
+
+## Hull-Dobell M, a, b
+
+$M = 2^31$
+$a = 1103515245$
+$b = 12345$
+
+Calculate:
+$D(x) = (ax + b) \mod M$
+
 ## Hoeffding confidence interval
 
 $$
