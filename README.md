@@ -26,6 +26,9 @@ $$
 \epsilon = (b-a) * \sqrt{\frac{\ln\left(\frac{2}{\alpha}\right)}{2n}}
 $$
 
+Generates the tuple:
+$$[a - \epsilon, a + \epsilon]$$
+
 ## Splits
 
 ```py
@@ -106,9 +109,10 @@ state[i] # Probability of being in state i after n iterations
 "What is the expected number of steps until the first time one enters B having started in A"
 
 Coefficients are derived from:
-E_A = 1 + P(A->A)E_A + P(A->B)0 + P(A->C)E_C
 
-E_C = 1 + P(C->A)E_A + P(C->B)0 + P(C->C)E_C
+$$E_A = 1 + P(A \rightarrow A)E_A + P(A \rightarrow B)0 + P(A \rightarrow C)E_C$$
+
+$$E_C = 1 + P(C \rightarrow A)E_A + P(C \rightarrow B)0 + P(C \rightarrow C)E_C$$
 
 ```py
 coefficients = [
