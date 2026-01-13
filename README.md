@@ -26,6 +26,14 @@ problem2_X_test = problem2_X[split2:]
 
 ## Markov Chains
 
+# General Notes
+
+A Chain is Irreducible if you can get from any state to any other state.\\
+A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.\\
+Quick check:\\
+If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.\\
+If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
+
 # Irreducible
 
 ```py
@@ -80,7 +88,7 @@ state[i] # Probability of being in state i after n iterations
 "What is the expected number of steps until the first time one enters B having started in A"
 
 Coefficients are derived from:
-E_A = 1 + P(A->A)E_A + P(A->B)0 + P(A->C)E_C
+E_A = 1 + P(A->A)E_A + P(A->B)0 + P(A->C)E_C\\
 E_C = 1 + P(C->A)E_A + P(C->B)0 + P(C->C)E_C
 
 ```py
@@ -91,6 +99,17 @@ coefficients = [
 constants = [1, 1]
 solution = np.linalg.solve(coefficients, constants)
 solution[0] # We are interested in the solution for A
+```
+
+# Period
+
+```py
+P_power = P.copy()
+for n in range(1, state**2 + 1):
+  if P_power[state, state] > 1e-10:
+    return_time.append(n)
+  P_power = np.dot(P_power, P)
+period = reduce(gcd, return_time)
 ```
 
 ## Matplotlib
