@@ -55,7 +55,7 @@ $$n = \text{TP } + \text{ FN}$$
 
 ### Accuracy
 
-$$\text{Accuracy} = \frac{\text{TP } + \text( TN)}{\text{TP } + \text{ TN} + \text{ FP} + \text{ FN}}$$
+$$\text{Accuracy} = \frac{\text{TP } + \text TN}{\text{TP } + \text{ TN} + \text{ FP} + \text{ FN}}$$
 $$n = \text{TP } + \text{ TN} + \text{ FP} + \text{ FN}$$
 
 ## Splits
