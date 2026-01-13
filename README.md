@@ -27,6 +27,12 @@ $$
 \epsilon = (b-a) * \sqrt{\frac{\ln\left(\frac{2}{\alpha}\right)}{2n}}
 $$
 
+Where $[a, b]$ is from the interval that the random variables $X_i$ are chosen. If the interval is $[0, 1]$ then we get:
+
+$$
+\epsilon = \frac{1}{\sqrt{n}} * \sqrt{0.5 * \frac{\ln\left(\frac{2}{\alpha}\right)}}
+$$
+
 Generates the tuple:
 $$[a - \epsilon, a + \epsilon]$$
 
