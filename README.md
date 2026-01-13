@@ -13,12 +13,12 @@ $$u <= \frac{f(x)}{M * g(x)}$$
 
 ## Hull-Dobell M, a, b
 
-$M = 2^31$
-$a = 1103515245$
-$b = 12345$
+$$M = 2^{31}$$
+$$a = 1103515245$$
+$$b = 12345$$
 
 Calculate:
-$D(x) = (ax + b) \mod M$
+$$D(x) = (ax + b) \mod M$$
 
 ## Hoeffding confidence interval
 
@@ -30,8 +30,8 @@ $$
 
 ```py
 # 40%, 20%, 40%
-split1 = int(0.4 _ df.shape[0])
-split2 = int(0.6 _ df.shape[0])
+split1 = int(0.4 * df.shape[0])
+split2 = int(0.6 * df.shape[0])
 
 problem2_X_train = problem2_X[:split1]
 problem2_X_calib = problem2_X[split1:split2]
@@ -42,10 +42,14 @@ problem2_X_test = problem2_X[split2:]
 
 ## General Notes
 
-A Chain is Irreducible if you can get from any state to any other state.\\
-A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.\\
-Quick check:\\
-If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.\\
+A Chain is Irreducible if you can get from any state to any other state.
+
+A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.
+
+Quick check:
+
+If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.
+
 If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
 
 ## Irreducible
@@ -102,7 +106,8 @@ state[i] # Probability of being in state i after n iterations
 "What is the expected number of steps until the first time one enters B having started in A"
 
 Coefficients are derived from:
-E_A = 1 + P(A->A)E_A + P(A->B)0 + P(A->C)E_C\\
+E_A = 1 + P(A->A)E_A + P(A->B)0 + P(A->C)E_C
+
 E_C = 1 + P(C->A)E_A + P(C->B)0 + P(C->C)E_C
 
 ```py
