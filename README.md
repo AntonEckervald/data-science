@@ -1,7 +1,7 @@
 # Accept Reject
 
 $$f(x) <= M * g(x)$$
-$$M >= f(x) / g(x)$$
+$$M >= \frac{f(x)}{g(x)}$$
 
 $M$ Needs to be the lowest value higher than the maximum of $f(x)/g(x)$
 
@@ -10,12 +10,13 @@ $$g(x) = \frac{1}{b-a}$$
 # Hoeffding confidence interval
 
 $$
-\epsilon = (b-a) * \sqrt{\frac{ln(\frac{2}{\alpha})}{2n}}
+\epsilon = (b-a) * \sqrt{\frac{\ln\left(\frac{2}{\alpha}\right)}{2n}}
 $$
 
 # Splits
 
 ```py
+# 40%, 20%, 60%
 split1 = int(0.4 _ df.shape[0])
 split2 = int(0.6 _ df.shape[0])
 
@@ -38,30 +39,30 @@ If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
 
 ```py
 def is_irreducible(P):
-n = len(P)
-I = np.eye(n)
-return np.all(np.linalg.matrix_power(I + P, n-1) > 0)
+  n = len(P)
+  I = np.eye(n)
+  return np.all(np.linalg.matrix_power(I + P, n-1) > 0)
 ```
 
 # Stationary distribution
 
 ```py
 def find_stationary(P):
-eigenvalues, eigenvectors = np.linalg.eig(P.T)
-idx = np.argmin(np.abs(eigenvalues - 1.0))
-steady_state = np.real(eigenvectors[:, idx])
-return steady_state / steady_state.sum()
+  eigenvalues, eigenvectors = np.linalg.eig(P.T)
+  idx = np.argmin(np.abs(eigenvalues - 1.0))
+  steady_state = np.real(eigenvectors[:, idx])
+  return steady_state / steady_state.sum()
 ```
 
 # Reversible
 
 ```py
 def is_reversible(P, stat_dist):
-for i in range(len(P)):
-for j in range(len(P)):
-if not np.isclose(P[i][j] * stat*dist[i], P[j][i] \* stat_dist[j]):
-return False
-return True
+  for i in range(len(P)):
+    for j in range(len(P)):
+      if not np.isclose(P[i][j] * stat*dist[i], P[j][i] \* stat_dist[j]):
+        return False
+  return True
 ```
 
 # State after n iterations
@@ -93,8 +94,8 @@ E_C = 1 + P(C->A)E_A + P(C->B)0 + P(C->C)E_C
 
 ```py
 coefficients = [
-[a, b],
-[c, d]
+  [a, b],
+  [c, d]
 ]
 constants = [1, 1]
 solution = np.linalg.solve(coefficients, constants)
@@ -125,6 +126,3 @@ plt.grid(True)
 plt.plot([x1, y1], [x2, y2], color="", linestyle="--")
 plt.show()
 ```
-
-$$
-$$
