@@ -1,6 +1,6 @@
 # Accept Reject:
 
-f(x) <= M \* g(x)
+$$f(x) <= M * g(x)$$
 M >= f(x) / g(x)
 
 M Needs to be the lowest value higher than the maximum of f(x)/g(x)
@@ -46,18 +46,12 @@ return steady_state / steady_state.sum()
 # Reversible:
 
 ```py
-
-```
-
 def is_reversible(P, stat_dist):
 for i in range(len(P)):
 for j in range(len(P)):
 if not np.isclose(P[i][j] * stat*dist[i], P[j][i] \* stat_dist[j]):
 return False
 return True
-
-```
-
 ```
 
 # State after n iterations:
