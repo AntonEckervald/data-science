@@ -38,14 +38,25 @@ $$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
 ## Accuracy, Precision and Recall
 
-$$\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}$$
-$n = \text{TP } + \text{ FP}$
+True Positive (TP)  
+False Positive (FP)  
+True Negative (TN)
+False Negative (FN)
 
-$$\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}$$
-$n = \text{TP } + \text{ FN}$
+### Precision
+
+$$\text{Precision} = \frac{\text{TP}}{\text{TP } + \text{ FP}}$$
+$$n = \text{TP } + \text{ FP}$$
+
+### Recall
+
+$$\text{Recall} = \frac{\text{TP}}{\text{TP } + \text{ FN}}$$
+$$n = \text{TP } + \text{ FN}$$
+
+### Accuracy
 
 $$\text{Accuracy} = \frac{\text{TP } + \text( TN)}{\text{TP } + \text{ TN} + \text{ FP} + \text{ FN}}$$
-$n = \text{TP } + \text{ TN} + \text{ FP} + \text{ FN}$
+$$n = \text{TP } + \text{ TN} + \text{ FP} + \text{ FN}$$
 
 ## Splits
 
@@ -63,14 +74,11 @@ problem2_X_test = problem2_X[split2:]
 
 ## General Notes
 
-A Chain is Irreducible if you can get from any state to any other state.
-
+A Chain is Irreducible if you can get from any state to any other state.  
 A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.
 
-Quick check:
-
-If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.
-
+Quick check:  
+If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.  
 If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
 
 ## Irreducible
