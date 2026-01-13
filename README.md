@@ -40,7 +40,7 @@ $$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
 True Positive (TP)  
 False Positive (FP)  
-True Negative (TN)
+True Negative (TN)  
 False Negative (FN)
 
 ### Precision
