@@ -1,5 +1,6 @@
 ## Accept Reject
 
+$$f(x) = \frac{d}{dx}F(x)$$
 $$f(x) <= M * g(x)$$
 $$M >= \frac{f(x)}{g(x)}$$
 
