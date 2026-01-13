@@ -36,11 +36,16 @@ $$
 Generates the tuple:
 $$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
-## Precision and Recall
+## Accuracy, Precision and Recall
 
 $$\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}$$
+$n = \text{TP } + \text{ FP}$
 
 $$\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}$$
+$n = \text{TP } + \text{ FN}$
+
+$$\text{Accuracy} = \frac{\text{TP } + \text( TN)}{\text{TP } + \text{ TN} + \text{ FP} + \text{ FN}}$$
+$n = \text{TP } + \text{ TN} + \text{ FP} + \text{ FN}$
 
 ## Splits
 
