@@ -1,17 +1,19 @@
-# Accept Reject:
+# Accept Reject
 
 $$f(x) <= M * g(x)$$
-M >= f(x) / g(x)
+$$M >= f(x) / g(x)$$
 
-M Needs to be the lowest value higher than the maximum of f(x)/g(x)
+$M$ Needs to be the lowest value higher than the maximum of $f(x)/g(x)$
 
-g(x) = 1/(b-a)
+$$g(x) = \frac{1}{b-a}$$
 
-# Hoeffding confidence interval:
+# Hoeffding confidence interval
 
-epsilon = (b-a) _ sqrt (ln(2/alpha) / (2 _ n))
+$$
+\epsilon = (b-a) * \sqrt{\frac{ln(\frac{2}{\alpha})}{2n}}
+$$
 
-# Splits:
+# Splits
 
 ```py
 split1 = int(0.4 _ df.shape[0])
@@ -24,7 +26,7 @@ problem2_X_test = problem2_X[split2:]
 
 ## Markov Chains
 
-# Irreducible:
+# Irreducible
 
 ```py
 def is_irreducible(P):
@@ -33,7 +35,7 @@ I = np.eye(n)
 return np.all(np.linalg.matrix_power(I + P, n-1) > 0)
 ```
 
-# Stationary distribution:
+# Stationary distribution
 
 ```py
 def find_stationary(P):
@@ -43,7 +45,7 @@ steady_state = np.real(eigenvectors[:, idx])
 return steady_state / steady_state.sum()
 ```
 
-# Reversible:
+# Reversible
 
 ```py
 def is_reversible(P, stat_dist):
@@ -54,7 +56,7 @@ return False
 return True
 ```
 
-# State after n iterations:
+# State after n iterations
 
 ```py
 state = np.array([1.0, 0.0, 0.0]) # Start in A
@@ -63,7 +65,7 @@ for _ in range(n):
 state[i] # Probability of being in state i after n iterations
 ```
 
-# First time state after n iterations:
+# First time state after n iterations
 
 ```py
 state = np.array([1.0, 0.0, 0.0]) # Start in A
@@ -73,7 +75,7 @@ for _ in range(n):
 state[i] # Probability of being in state i after n iterations
 ```
 
-# Expected number of steps:
+# Expected number of steps
 
 "What is the expected number of steps until the first time one enters B having started in A"
 
@@ -104,3 +106,6 @@ plt.grid(True)
 plt.plot([x1, y1], [x2, y2], color="", linestyle="--")
 plt.show()
 ```
+
+$$
+$$
