@@ -27,14 +27,14 @@ $$
 \epsilon = (b-a) * \sqrt{\frac{\ln\left(\frac{2}{\alpha}\right)}{2n}}
 $$
 
-Where $[a, b]$ is from the interval that the random variables $X_i$ are chosen. If the interval is $[0, 1]$ then we get:
+Where $[a, b]$ is from the interval that the random variables $X_i$ are chosen, and $\alpha$ is $1 - \text{confidence interval}$. If the interval is $[0, 1]$ then we get:
 
 $$
 \epsilon = \frac{1}{\sqrt{n}} * \sqrt{0.5 * \ln\left(\frac{2}{\alpha}\right)}
 $$
 
 Generates the tuple:
-$$[a - \epsilon, a + \epsilon]$$
+$$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
 ## Precision and Recall
 
