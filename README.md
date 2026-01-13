@@ -30,6 +30,12 @@ $$
 Generates the tuple:
 $$[a - \epsilon, a + \epsilon]$$
 
+## Precision and Recall
+
+$$\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}$$
+
+$$\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}$$
+
 ## Splits
 
 ```py
