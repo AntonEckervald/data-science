@@ -6,6 +6,10 @@ $$P(A|B) := \frac{P(A \cap B)}{P(B)}$$
 
 $$P(A|B) := \frac{P(A)P(B|A)}{P(B)}$$
 
+## Law of Total Probability
+
+$$P(B) := \sum_{h=1}^{k}P(B|A_h)P(A_h)$$
+
 ## Accept Reject
 
 $$f(x) = \frac{d}{dx}F(x)$$
