@@ -2,6 +2,10 @@
 
 $$P(A|B) := \frac{P(A \cap B)}{P(B)}$$
 
+## Bayes Theorem
+
+$$P(A|B) := \frac{P(A)P(B|A)}{P(B)}$$
+
 ## Accept Reject
 
 $$f(x) = \frac{d}{dx}F(x)$$
