@@ -1,3 +1,7 @@
+## Conditional Probability
+
+$$P(A|B) := \frac{P(A \and B)}{P(B)}$$
+
 ## Accept Reject
 
 $$f(x) = \frac{d}{dx}F(x)$$
