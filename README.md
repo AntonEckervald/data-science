@@ -1,6 +1,6 @@
 ## Conditional Probability
 
-$$P(A|B) := \frac{P(A \and B)}{P(B)}$$
+$$P(A|B) := \frac{P(A \cap B)}{P(B)}$$
 
 ## Accept Reject
 
