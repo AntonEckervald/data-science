@@ -17,7 +17,7 @@ $$f(x) = \binom{n}{x}p^x(1 - p)^{n-x}$$
 
 ## Maximum Likelihood Estimate example
 
-$$f(x;\lambda) 0 \frac{1}{24}\lambda^5x^4e^{-\lambda x}$$
+$$f(x;\lambda) = \frac{1}{24}\lambda^5x^4e^{-\lambda x}$$
 
 ### Log-Likelihood function
 
