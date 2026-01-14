@@ -13,7 +13,7 @@ $$P(B) := \sum_{h=1}^{k}P(B|A_h)P(A_h)$$
 ## Binomial Distribution, PMF
 
 $$N \sim \text{Binom}(n, p)$$
-$$f(x) = \binom{n}{x} * (1 - p)^(n-x)$$
+$$f(x) = \binom{n}{x}p^x(1 - p)^{n-x}$$
 
 ## Accept Reject
 
