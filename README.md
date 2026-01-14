@@ -15,6 +15,24 @@ $$P(B) := \sum_{h=1}^{k}P(B|A_h)P(A_h)$$
 $$N \sim \text{Binom}(n, p)$$
 $$f(x) = \binom{n}{x}p^x(1 - p)^{n-x}$$
 
+## Maximum Likelihood Estimate example
+
+$$f(x;\lambda) 0 \frac{1}{24}\lambda^5x^4e^{-\lambda x}$$
+
+### Log-Likelihood function
+
+$$\sum_{i=1}^n \ln{f(x;\lambda)}$$
+$$\sum_{i=1}^n ln{\frac{1}{24}} + 5\ln{\lambda} + 4\ln{x_i} - \lambda x_i$$
+$$n ln{\frac{1}{24}} + 5n\ln{\lambda} + 4\sum_{i=1}^n\ln{x_i} - \lambda \sum_{i=1}^n x_i$$
+
+### Derive w.r.t $\lambda$
+
+$$\frac{5n}{\lambda} - \sum_{i=1}^n x_i$$
+
+#### Set $\lambda^{´} = 0$
+
+$$\lambda = \frac{5n}{\sum_{i=1}^n x_i}$$
+
 ## Accept Reject
 
 $$f(x) = \frac{d}{dx}F(x)$$
