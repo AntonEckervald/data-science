@@ -105,6 +105,15 @@ problem2_X_calib = problem2_X[split1:split2]
 problem2_X_test = problem2_X[split2:]
 ```
 
+```py
+X_a, X_b, y_a, y_b = train_test_split(problem2_X, problem2_Y, train_size=0.8, random_state=42)
+problem2_X_train, problem2_X_test = np.array_split(X_a, 2)
+problem2_X_calib = X_b
+
+problem2_Y_train, problem2_Y_test = np.array_split(y_a, 2)
+problem2_Y_calib = y_b
+```
+
 # Markov Chains
 
 ## General Notes
