@@ -75,11 +75,17 @@ $$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
 $$E(g(X)) = \int g(x)f(x)$$
 
+## VC
+
+$$
+l_{VC} = \sqrt{\frac{1}{n}\left(d \log{\left(\frac{2*e*n}{d}\right)} + \log{\left(\frac{2}{n}\right)}\right)}
+Where: $d = dimensions$, $n = samples$
+
 ## Accuracy, Precision and Recall
 
-True Positive (TP)  
-False Positive (FP)  
-True Negative (TN)  
+True Positive (TP)
+False Positive (FP)
+True Negative (TN)
 False Negative (FN)
 
 ```py
@@ -129,11 +135,11 @@ problem2_Y_calib = y_b
 
 ## General Notes
 
-A Chain is Irreducible if you can get from any state to any other state.  
+A Chain is Irreducible if you can get from any state to any other state.
 A Chain is Aperiodic if the GCD of all cycles that start and end a path is equal to 1, if higher, Periodic.
 
-Quick check:  
-If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.  
+Quick check:
+If Chain is Irreducible and there is a self-loop somewhere: Aperiodic.
 If Chain is Reducible but there is a self-loop inside the "trap": Aperiodic.
 
 ## Irreducible
@@ -229,3 +235,4 @@ plt.grid(True)
 plt.plot([x1, y1], [x2, y2], color="", linestyle="--")
 plt.show()
 ```
+$$
