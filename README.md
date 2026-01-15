@@ -77,8 +77,7 @@ $$E(g(X)) = \int g(x)f(x)$$
 
 ## VC
 
-$$
-l_{VC} = \sqrt{\frac{1}{n}\left(d \log{\left(\frac{2*e*n}{d}\right)} + \log{\left(\frac{2}{n}\right)}\right)}
+$$l_{VC} = \sqrt{\frac{1}{n}\left(d \log{\left(\frac{2*e*n}{d}\right)} + \log{\left(\frac{2}{n}\right)}\right)}$$
 Where: $d = dimensions$, $n = samples$
 
 ## Accuracy, Precision and Recall
@@ -235,4 +234,6 @@ plt.grid(True)
 plt.plot([x1, y1], [x2, y2], color="", linestyle="--")
 plt.show()
 ```
+
+$$
 $$
