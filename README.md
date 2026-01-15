@@ -213,6 +213,28 @@ solution = np.linalg.solve(coefficients, constants)
 solution[0] # We are interested in the solution for A
 ```
 
+Expected theoretical number of steps from start state to all states:
+
+```py
+def theoretical_hitting_times(P, start_state):
+    hit_theor = np.full(N_states, np.nan, dtype=float)
+    for target in range(len(P)):
+        if target == start_state:
+            hit_theor[target] = 1
+            continue
+
+        idx = [i for i in range(len(P)) if i != target]
+        Q = P[np.ix_(idx, idx)]
+
+        I = np.eye(len(idx))
+        A = I - Q
+        b = np.ones(len(idx))
+
+        x = np.linalg.solve(A, b)
+        hit_theor[target] = x[idx.index(start_state)]
+    return hit_theor
+```
+
 ## Period
 
 ```py
