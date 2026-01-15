@@ -78,7 +78,7 @@ $$E(g(X)) = \int g(x)f(x)$$
 ## VC
 
 $$
-l_VC = \sqrt{\frac{1}{n}\left(d \log{\frac{2*e*n}{d}} + \log{\frac{2}{n}}\right)}
+l_{VC} = \sqrt{\frac{1}{n}\left(d * \log \left(\frac{2*e*n}{d}\right) + \log \left(\frac{2}{n}\right)\right)}
 $$
 
 Where: $d = dimensions$, $n = samples$
