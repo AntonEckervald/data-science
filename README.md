@@ -71,12 +71,23 @@ $$
 Generates the tuple:
 $$[\overline{X}_n - \epsilon, \overline{X}_n  + \epsilon]$$
 
+## Approximate compute integral
+
+$$E(g(X)) = \int g(x)f(x)$$
+
 ## Accuracy, Precision and Recall
 
 True Positive (TP)  
 False Positive (FP)  
 True Negative (TN)  
 False Negative (FN)
+
+```py
+TP = np.sum((y_true == 1) & (y_pred == 1))
+FP = np.sum((y_true == 0) & (y_pred == 1))
+TN = np.sum((y_true == 0) & (y_pred == 0))
+FN = np.sum((y_true == 1) & (y_pred == 0))
+```
 
 ### Precision
 
